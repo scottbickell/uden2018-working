@@ -1,0 +1,18 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+p {
+  font-family: "Charmonman", cursive;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.thought2 {
+  font-family: "Charmonman", cursive;
+}
+
+.fas.red {
+  color: red;
+}

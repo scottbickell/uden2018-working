@@ -1,0 +1,27 @@
+.btn {
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid blue;
+  display: inline-block;
+}
+.bth:before {
+  content: "text";
+}
+.btn:after {
+  content: "text";
+  padding: 10px;
+  background-color: palegoldenrod;
+}
+
+.btn:hover {
+  background-color: aqua;
+  border-color: red;
+}
+.btn:active {
+  background-color: brown;
+}
+
+.btn:visited {
+  border-color: red;
+}

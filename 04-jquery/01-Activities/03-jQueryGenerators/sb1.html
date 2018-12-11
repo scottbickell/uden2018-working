@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery Dump</title>
+
+  <!-- Added link to the jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="myDiv">
+    <h1>This is the header</h1>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+    </ul>
+</div>
+
+  <script type="text/javascript">
+    var $listHTML = $("#myDiv").html();
+    // $("ul").append($listHTML);
+    console.log($listHTML);
+
+  </script>
+
+</body>
+</html>

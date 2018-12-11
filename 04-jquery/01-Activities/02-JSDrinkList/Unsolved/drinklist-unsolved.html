@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Content!</title>
+</head>
+<style> h1 {   margin-top: 50px; } </style>
+
+<body>
+    <h1>Drink Selection!</h1>
+    <hr>
+    <!--Instructions 
+		
+		04-jquery/01-Activities/02-JSDrinkList/Unsolved/drinklist-unsolved.html  
+		
+		Using the file above as a starting point, add the missing code such that your JavaScript generates HTML content that displays all of the drink options.  
+		
+		HINT:   You will need a for-loop. Inside your for-loop you will need to use each of the following methods: 
+		`createElement`, `.innerHTML`, and `.appendChild`.  
+		
+		BONUS:  Instead of using a `for` loop, use the .forEach method. -->
+
+    <!-- Here we create a generic drink-options div -->
+
+    <a href="#" onclick="myFunction();">this link can do stuff</a>
+
+    <div id="drink-options"></div>
+
+    <script type="text/javascript">
+        // one thing at a time 
+
+        function myFunction() {
+            var myButton = document.createElement("button");
+            myButton.innerHTML = "some text for the button";
+            // var myButtonText = document.innerHTML("text for the button");
+            // myButton.appendChild(myButtonText);
+            document.body.appendChild(myButton);
+        }
+
+        // Array holds all of the drinks available     
+        // var drinkList = [
+        // 	"Coffee: $5", 
+        // 	"Espresso: $7", 
+        // 	"Cappuccino: $6", 
+        // 	"Latte: $4", 
+        // 	"Tea: $3", 
+        // 	"Ice Coffee: $6",
+        // 	"Ice Espresso: $8", 
+        // 	"Ice Latte: $6", "Ice Tea: $4"
+        // ];
+        // 1. Create code that "grabs" the div with the matching id (#drink-options);     
+        // ...       
+        // ...       
+        // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.     
+        // HINT: You will need to use each of the following methods: createElement, textContent, appendChild     
+        // ...       
+        // ...
+    </script>
+</body>
+
+</html>
