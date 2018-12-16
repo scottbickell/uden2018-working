@@ -4,7 +4,7 @@ In this activity we will update the TV constructor function to be able to search
 
 ## Instructions
 
-* Open [tv.js](Unsolved/tv.js) and update the constructor function's `findActor` method. It should use the `request` package to search the TV Maze API using the provided URL.
+* Open [tv.js](Unsolved/tv.js) and update the constructor function's `findActor` method. It should use the `axios` package to search the TV Maze API using the provided URL.
 
 * Once the data has been retrieved from the API, parse it as JSON (it should be a string initially) and grab only the first result (it should be an array of JSON objects).
 

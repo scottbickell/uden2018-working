@@ -13,3 +13,13 @@ var fs = require("fs");
 
 // Use fs.writeFile to log a message to a file called
 // log.txt. Are yo using callbacks anywhere? Where?
+
+function lessonStarted(suject, callback) {
+    console.log(`Today we learned about ${subject}.`);
+    callback(subject);
+}
+
+function lessonFinished(subject) {
+    console.log(`I am now a Jedi master knowing ${subject}. `);
+}
+console.log( lessonStarted('Callbacks', lessonFinished));
