@@ -12,10 +12,14 @@ fs.readFile("Unsolved/best_things_ever.txt", "utf8", function(error, data) {
 
     const output = data.split(',');
 
+    // two different ways to do the same thing:
+
+    // 1.
     // for (var i = 0; i < output.length; i++ ) {
     //     console.log(output[i]);
     // }
 
+    // 2.
     output.forEach(items => {
         console.log(items);
     })
@@ -24,6 +28,6 @@ fs.readFile("Unsolved/best_things_ever.txt", "utf8", function(error, data) {
     var dataArr = data.split(",");
   
     // We will then re-display the content as an array for later use.
-    // console.log(dataArr);
+    console.log(dataArr);
   
   });
