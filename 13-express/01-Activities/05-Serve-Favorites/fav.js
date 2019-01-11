@@ -32,7 +32,6 @@ function handleRequest(req, res) {
   // Depending on the URL, display a different HTML file.
   switch (path) {
 
-
     // HOME
     case "/":
       return fs.readFile(__dirname + "/index.html", function (err, data) {
