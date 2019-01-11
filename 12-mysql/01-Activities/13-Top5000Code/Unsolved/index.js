@@ -4,50 +4,48 @@ var inquirer = require("inquirer")
 
 // create the connection information for the sql database
 var connection = mysql.createConnection({
-  host: "localhost",
+    host: "localhost",
 
-  // Your port; if not 3306
-  port: 3306,
+    // Your port; if not 3306
+    port: 8889,
 
-  // Your username
-  user: "root",
+    // Your username
+    user: "root",
 
-  // Your password
-  password: "root",
-  database: "top_songsDB"
+    // Your password
+    password: "root",
+    database: "top_songsDB"
 });
 
 // connect to the mysql server and sql database
 connection.connect(function (err) {
-  if (err) throw err;
-  // run the start function after the connection is made to prompt the user
-  start();
+    if (err) throw err;
+    // run the start function after the connection is made to prompt the user
+    // start();
+    console.log("connection successful");
 });
 
-function songSearch() {
-  inquirer.prompt({
-    name: 'song',
-    type: 'input',
-    message: 'What song would you like to search for?'
-  }).then(answer) => {
-    const query = 'SELECT postition, song, year FROM'
-  }
-}
-
-// function start() {
-//   inquirer
-//     .prompt({
-//       name: "postOrBid",
-//       type: "rawlist",
-//       message: "Would you like to [POST] an auction or [BID] on an auction?",
-//       choices: ["POST", "BID"]
+// function songSearch() {
+//     inquirer.prompt({
+//         name: 'song',
+//         type: 'input',
+//         message: 'What song would you like to search for?'
+//     }).then(function (answer) {
+//         console.log(answer.song);
+//         connection.query("SELECT * FROM top5000 WHERE ?", {
+//             song: answer.song
+//         }, function (err, res) {
+//             console.log(
+//                 "Position: " +
+//                 res[0].position +
+//                 " || Song: " +
+//                 res[0].song +
+//                 " || Artist: " +
+//                 res[0].artist +
+//                 " || Year: " +
+//                 res[0].year
+//             );
+//             songSearch();
+//         })
 //     })
-//     .then(function(answer) {
-//       // based on their answer, either call the bid or the post functions
-//       if (answer.postOrBid.toUpperCase() === "POST") {
-//         postAuction();
-//       } else {
-//         bidAuction();
-//       }
-//     });
 // }
