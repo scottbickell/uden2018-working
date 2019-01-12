@@ -1,5 +1,5 @@
 // Dependencies
-var express = require("express");
+var express = require("../node_modules/express");
 
 var app = express();
 var PORT = 3000;
