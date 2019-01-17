@@ -14,3 +14,5 @@
 ## Good luck! Don't stress out
 
 * Spend some time trying to build exposure. But don't get overwhelmed. We'll have plenty of time to come back to this.
+
+Overview of project solution: <https://www.youtube.com/watch?v=G7RvQMW2DOg&feature=youtu.be&list=PLgJ8UgkiorCmI_wKKVt5FlkTG63sQF6rr>
