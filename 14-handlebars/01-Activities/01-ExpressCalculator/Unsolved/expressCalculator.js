@@ -11,33 +11,40 @@ var app = express();
 // Routes
 // What routes do you need to have? Which ones are optional?
 // TODO Add your routes here
-app.get("", function(req, res) {
+app.get("/:operator/:num1/:num2", function (req, res) {
+
 
   // TODO parse out the variables from the request
   // Parameters are received from the URL
   // TODO make sure they're converted to integers (and not strings)
   // Parameters are converted to integers
 
+  var operator = req.params.operator
+  var num1 = parseInt(req.params.num1);
+  var num2 = parseInt(req.params.num2);
+
   // Initialize the result variable to send later
   var result;
   // Switch statement chooses operation based on the operation parameter.
   switch (operation) {
-  // BONUS - How could you use * + etc. inside the app.get()?
-  case "add":
-    // Add your logic here. Pun intended.
-    break;
-  case "subtract":
-    // Subtract logic
-    break;
-  case "multiply":
-    // Multiply
-    break;
-  case "divide":
-    // Divide
-    break;
-  default:
-    // Handle anything that isn't specified
-    result =
+    // BONUS - How could you use * + etc. inside the app.get()?
+    case "add":
+      // Add your logic here. Pun intended.
+      result = add(num1, num2);
+      break;
+    case "subtract":
+      result = subtract(num1, num2);
+      break;
+    case "multiply":
+      result = multiply(num1, num2);
+      break;
+    case "divide":
+      result = divide(num1, num2);
+      break;
+    default:
+
+      // Handle anything that isn't specified
+      result =
         "Sorry! The only valid operations are add, subtract, multiply, and divide.";
   }
 
@@ -47,7 +54,7 @@ app.get("", function(req, res) {
 });
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
