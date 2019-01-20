@@ -39,7 +39,7 @@ var icecreams = [{
   {
     name: 'jawbreakers',
     price: 6,
-    awesomeness: 2
+    awesomeness: 3
   },
 ];
 

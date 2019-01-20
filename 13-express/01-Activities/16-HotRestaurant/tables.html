@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="jumbotron">
@@ -35,6 +36,8 @@
                     </div>
                     <div class="card-body">
                         <ul id="tableList" class="list-group"></ul>
+                        <div class="panel-body" id="tableSection">
+                        </div>
                     </div>
                 </div>
 
@@ -58,4 +61,53 @@
             </div>
         </footer>
     </div>
+    <script>
+        function runReservationQuery() {
+            var currentURL = window.location.origin;
+            // var currentURL = "localhost:3000";
+
+
+
+            $.ajax({
+                    url: currentURL + "/api/tables",
+                    method: "GET"
+                })
+                .done(function (tableData) {
+                    $("#tableSection").empty();
+                    $("#waitlistSection").empty();
+
+                    console.log(tableData);
+
+                    for (var i = 0; i < tableData.length; i++) {
+                        // stuff goes here
+                    }
+
+                    // Loop through and display each of the customers
+                    // for (var i = 0; i < tableData.length && i < 5; i++) {
+
+                    //     console.log(tableData);
+
+                    //     // Create the HTML Well (Section) and Add the table content for each reserved table
+                    //     var tableSection = $("<div>");
+                    //     tableSection.addClass('well');
+                    //     tableSection.attr('id', 'tableWell-' + i + 1)
+                    //     $('#tableSection').append(tableSection);
+
+                    //     var tableNumber = i + 1;
+
+                    //     // Then display the remaining fields in the HTML (Section Name, Date, URL)
+                    //     $("#tableWell-" + i + 1).append('<h2><button id="' + i +
+                    //         '" class="label label-danger clearReservation">X</button> <span class="label label-primary">' +
+                    //         tableNumber + "</span> " + tableData[i].name + "</h2>");
+
+                    // }
+
+                    // if (tableData.length > 4) {
+                    //     runWaitListQuery(tableData);
+                    // }
+                });
+        }
+
+        runReservationQuery();
+    </script>
 </body>

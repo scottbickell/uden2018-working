@@ -19,8 +19,8 @@ app.use(express.json());
 // ===================================================
 var reservations = [{
         customerName: "Scott",
-        phoneNumber: "scott@scott.com",
-        customerEmail: "Jedi Master",
+        phoneNumber: "9874563289",
+        customerEmail: "scott@scott.com",
         customerID: "1"
     },
     {
@@ -36,7 +36,6 @@ var reservations = [{
         customerID: "3"
     }
 ];
-
 
 // Routes
 // =============================================================
@@ -56,28 +55,28 @@ app.get("/tables", function (req, res) {
 
 // Displays all tables
 app.get("/api/tables", function (req, res) {
-    return res.json(tables);
+    return res.json(reservations);
 });
 
 // Displays all waitlist
-app.get("/api/waitlist", function (req, res) {
-    return res.json(waitlist);
-});
+// app.get("/api/waitlist", function (req, res) {
+//     return res.json(reservations);
+// });
 
 // Displays a single character, or returns false
-app.get("/api/characters/:character", function (req, res) {
-    var chosen = req.params.character;
+// app.get("/api/characters/:character", function (req, res) {
+//     var chosen = req.params.character;
 
-    console.log(chosen);
+//     console.log(chosen);
 
-    for (var i = 0; i < characters.length; i++) {
-        if (chosen === characters[i].routeName) {
-            return res.json(characters[i]);
-        }
-    }
+//     for (var i = 0; i < characters.length; i++) {
+//         if (chosen === characters[i].routeName) {
+//             return res.json(characters[i]);
+//         }
+//     }
 
-    return res.json(false);
-});
+//     return res.json(false);
+// });
 
 // Create New Characters - takes in JSON input
 // app.post("/api/characters", function (req, res) {
