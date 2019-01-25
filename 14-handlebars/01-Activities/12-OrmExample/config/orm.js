@@ -38,3 +38,4 @@ var orm = {
 };
 
 module.exports = orm;
+console.log(typeof(orm));
