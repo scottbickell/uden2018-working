@@ -8,13 +8,12 @@
 // ---------------------------------------------------------------------------------------------------------
 
 // Include the axios npm package (Don't forget to run "npm install axios" in this folder first!)
-var axios = require("axios");
-
+// ...
 
 
 // Grab or assemble the movie name and store it in a variable called "movieName"
 var movieName = "";
-var movieName = process.argv[2];
+// ...
 
 
 // Then run a request with axios to the OMDB API with the movie specified
@@ -26,11 +25,7 @@ console.log(queryUrl);
 
 
 // Then create a request with axios to the queryUrl
-axios.get(queryUrl).then(
-    function (response) {
-        console.log("Release year: " + JSON.stringify(response.data.Year));
-    }
-)
+// ...
 
 // If the request with axios is successful
 // ...
