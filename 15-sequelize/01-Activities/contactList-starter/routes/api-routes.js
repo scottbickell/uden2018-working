@@ -25,8 +25,8 @@ module.exports = function (app) {
                 console.log("New contact ", contact.dataValues);
                 res.json(contact);
             })
-            .catch(function (eff) {
-                console.log(eff);
+            .catch(function (err) {
+                console.log(err);
                 res.json(err);
             })
 
@@ -43,8 +43,8 @@ module.exports = function (app) {
                 console.log("Deleted contact", contact.dataValues);
                 res.json(contact);
             })
-            .catch(function(eff) {
-                console.log(eff);
+            .catch(function(err) {
+                console.log(err);
                 res.json(err);
             })
 
