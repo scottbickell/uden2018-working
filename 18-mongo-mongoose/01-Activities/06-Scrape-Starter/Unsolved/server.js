@@ -6,7 +6,7 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 
 // Make a request via axios to grab the HTML body from the site of your choice
-axios.get("https://www.npr.org").then(function(response) {
+axios.get("https://www.nytimes.com").then(function(response) {
 
   // Load the HTML into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -18,7 +18,7 @@ axios.get("https://www.npr.org").then(function(response) {
   // Select each element in the HTML body from which you want information.
   // NOTE: Cheerio selectors function similarly to jQuery's selectors,
   // but be sure to visit the package's npm page to see how it works
-  $(".credit-caption").each(function(i, element) {
+  $("article").each(function(i, element) {
 
     var title = $(element).children().text();
     var link = $(element).find("a").attr("href");
