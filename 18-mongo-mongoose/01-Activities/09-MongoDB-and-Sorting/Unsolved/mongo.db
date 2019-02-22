@@ -1,0 +1,3 @@
+db.animals.insert({"name": "Zebra", "numLegs": 4, "class": "normal", "weight": 200, "whatWouldYouReallyCallIt": "Not sure what this is"})
+
+db.animals.insert({})

@@ -17,24 +17,25 @@ var collections = ["animals"];
 var db = mongojs(databaseUrl, collections);
 
 // This makes sure that any errors are logged if mongodb runs into an issue
-db.on("error", function(error) {
+db.on("error", function (error) {
   console.log("Database Error:", error);
 });
 
 // Root: Displays a simple "Hello World" message (no mongo required)
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("Hello world");
 });
 
 // All: Send JSON response with all animals
-app.get("/all", function(req, res) {
+app.get("/all", function (req, res) {
   // Query: In our database, go to the animals collection, then "find" everything
-  db.animals.find({}, function(err, data) {
+  db.animals.find({}, function (err, data) {
+
+
     // Log any errors if the server encounters one
     if (err) {
       console.log(err);
-    }
-    else {
+    } else {
       // Otherwise, send the result of this query to the browser
       res.json(data);
     }
@@ -45,9 +46,42 @@ app.get("/all", function(req, res) {
 
 // 1: Name: Send JSON response sorted by name in ascending order, e.g. GET "/name"
 
-// 2: Weight: Send JSON response sorted by weight in descending order, , e.g. GET "/weight"
+app.get("/name", function (req, res) {
 
-// Set the app to listen on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
-});
+      // db.animals.find({}, function (err, data) {
+
+        db.animals.find().sort({name: 1}, function (err, data) {
+
+
+          // Log any errors if the server encounters one
+          if (err) {
+            console.log(err);
+          } else {
+            // Otherwise, send the result of this query to the browser
+            res.json(data);
+          }
+        });
+      });
+
+      // 2: Weight: Send JSON response sorted by weight in descending order, , e.g. GET "/weight"
+
+      app.get("/weight", function (req, res) {
+
+  
+          db.animals.find().sort({weight: -1}, function (err, data) {
+  
+  
+            // Log any errors if the server encounters one
+            if (err) {
+              console.log(err);
+            } else {
+              // Otherwise, send the result of this query to the browser
+              res.json(data);
+            }
+          });
+        });
+
+      // Set the app to listen on port 3000
+      app.listen(3000, function () {
+        console.log("App running on port 3000!");
+      });
