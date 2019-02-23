@@ -51,13 +51,13 @@ app.get("/read", function(req, res) {});
 app.get("/unread", function(req, res) {});
 
 // Mark a book as having been read
-app.get("/markread/:id", function(req, res) {
+app.put("/markread/:id", function(req, res) {
   // Remember: when searching by an id, the id needs to be passed in
   // as (mongojs.ObjectId(IdYouWantToFind))
 });
 
 // Mark a book as having been not read
-app.get("/markunread/:id", function(req, res) {
+app.put("/markunread/:id", function(req, res) {
   // Remember: when searching by an id, the id needs to be passed in
   // as (mongojs.ObjectId(IdYouWantToFind))
 });
