@@ -29,6 +29,8 @@ const oddOrEven = originalArray.map(theNumber => {
   }
 });
 
+console.log(oddOrEven);
+
 // Your code here
 
 // Bonus: Use arrow functions as callbacks!
