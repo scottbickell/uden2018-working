@@ -21,6 +21,8 @@ class SearchResultContainer extends Component {
   };
 
   handleInputChange = event => {
+
+    // we can destructure this to save us a line
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
