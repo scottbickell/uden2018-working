@@ -2,11 +2,7 @@
 
 // PHP's associative arrays are just key-value maps.
 //   They're a lot like JavaScript's objects:
-$artist_and_country = [
-  'Goethe' => 'Germany',
-  'Strindberg' => 'Sweden',
-  'Ibsen' => 'Norway'
-];
+$artist_and_country = ['Goethe' => [true, false, "key" => ["another array"]],'Strindberg' => 'Sweden','Ibsen' => 'Norway'];
 
 // Getting the value for a key is just like getting the value of a JavaScript
 //   object's  property using bracket notation:
@@ -19,3 +15,5 @@ echo str_repeat('=', 12) . "\n";
 foreach ($artist_and_country as $name => $country) {
   echo "$name comes from $country.\n";
 }
+
+var_dump($artist_and_country);

@@ -3,12 +3,15 @@
 /* For JavaScript experts like yourselves, there's surprisingly little to say
  *   about PHP's conditional and comparison operators. They behave exactly as
  *   you'd expect. */
-$name = 'Peleke Sengstacke';
+$name = 'Peleke';
 
 /* Note that braces aren't required around single-line if/else if/else
  * expressions. */
 if (strlen($name) > 10)
   echo "'$name' is a long name.\n";
+
+echo "this should runn \n";
+
 
 /* Defaulted to the same, but feel free to change either to change the way
  * the branches execute below. */

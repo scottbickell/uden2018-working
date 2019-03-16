@@ -8,7 +8,7 @@ $name = 'Peleke';
 $age  = 23;
 
 // Automatically inserts the value of $name.
-echo "My name is $name.\n"; 
+echo "My name is $name.\n";
 
 // Literally prints $name. Also note that:
 //   1. echo does not add newlines for us; and
